@@ -1,0 +1,29 @@
+---
+# tasks file for virtualbox
+
+- name: add virtualbox
+  copy: 
+    src: virtualbox.list
+    dest: /etc/apt/sources.list.d/virtualbox.list
+  become: yes
+
+- name: import gpg
+  apt_key:
+     url: "https://www.virtualbox.org/download/oracle_vbox_2016.asc"
+     state: present
+  become: yes
+- name: import gpg2
+  apt_key:
+     url: "https://www.virtualbox.org/download/oracle_vbox.asc"
+     state: present
+  become: yes
+
+- name: update
+  command: "apt-get update"
+  become: yes
+
+- name: install
+  package: 
+     name: "virtualbox-6.0"
+     state: present
+  become: yes

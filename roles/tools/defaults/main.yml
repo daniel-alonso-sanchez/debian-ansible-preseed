@@ -1,0 +1,29 @@
+---
+tools:
+- name: eclipse
+  url: "http://ftp.halifax.rwth-aachen.de/eclipse//technology/epp/downloads/release/2019-12/R/eclipse-jee-2019-12-R-linux-gtk-x86_64.tar.gz"
+  installation_path: "/home/usuario/apps/dev/ide"
+
+- name: visual_studio_code
+  url: "https://az764295.vo.msecnd.net/stable/26076a4de974ead31f97692a0d32f90d735645c0/code-stable-1576682093.tar.gz"
+  installation_path: "/home/usuario/apps/dev/ide"
+
+- name: dbeaver
+  url: "https://dbeaver.io/files/dbeaver-ce-latest-linux.gtk.x86_64.tar.gz"
+  installation_path: "/home/usuario/apps/dev/bbdd"
+
+
+- name: postman
+  url: "https://dl.pstmn.io/download/latest/linux64"
+  installation_path: "/home/usuario/apps/testing"
+
+- name: soapui
+  url: "https://s3.amazonaws.com/downloads.eviware/soapuios/5.5.0/SoapUI-5.5.0-linux-bin.tar.gz"
+  installation_path: "/home/usuario/apps/testing"
+
+debs:
+
+- https://downloads.slack-edge.com/linux_releases/slack-desktop-4.2.0-amd64.deb
+- https://packages.microsoft.com/repos/ms-teams/pool/main/t/teams/teams_1.2.00.32451_amd64.deb
+- https://hadler.me/files/forticlient-sslvpn_4.4.2333-1_amd64.deb
+- http://ftp.br.debian.org/debian/pool/non-free/f/firmware-nonfree/firmware-iwlwifi_20190114-2_all.deb

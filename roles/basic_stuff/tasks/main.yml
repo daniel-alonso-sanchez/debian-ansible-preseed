@@ -1,0 +1,9 @@
+---
+
+- name: "Include riskms hosts"
+  lineinfile: 
+    dest: /etc/hosts
+    line: '{{item.ip_addr}} {{ item.host_name }}'
+    state: present
+  become: yes
+  with_items: "{{riskms_hosts}}"

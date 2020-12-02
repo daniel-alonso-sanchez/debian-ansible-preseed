@@ -1,0 +1,14 @@
+- name: "create dir if not exists"
+  include: create_if_not_exists.yml install_dir={{tool.installation_path}}  
+
+- name: "fetch package {{tool.name}} from {{tool.url}}"
+  get_url:
+     url: "{{tool.url}}"
+     dest: "/tmp/{{tool.name}}.tar.gz"
+     timeout: 100
+
+- name: "fetching {{tool.name}} from /tmp/{{tool.name}}.tar.gz and extracting into {{tool.installation_path}}"
+  unarchive:
+    src: "/tmp/{{tool.name}}.tar.gz"
+    dest: "{{tool.installation_path}}"
+    remote_src: yes

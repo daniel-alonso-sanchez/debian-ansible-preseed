@@ -1,0 +1,10 @@
+{
+  "insecure-registries": [
+    "devtools.intranet.riskms.es:8787",
+    "devtools.intranet.riskms.es:8786",
+    "devtools.intranet.riskms.es:8081"
+  ]
+
+
+}
+

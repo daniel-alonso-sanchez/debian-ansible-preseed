@@ -1,0 +1,15 @@
+  - name: "get stats of {{install_dir}} "
+    stat:
+     path: "{{install_dir}}"
+    register: my_folder 
+  - name: "echo if directory already existed"
+    debug:
+      msg: "the {{install_dir}} directory already exists"
+    when: my_folder.stat.exists
+ 
+  - name: "Creates directory {{install_dir}}"
+    file:
+     path: "{{install_dir}}"
+     state: directory
+     mode: 0755
+    when: my_folder.stat.exists == false

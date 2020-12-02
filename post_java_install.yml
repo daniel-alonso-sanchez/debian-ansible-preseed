@@ -1,0 +1,25 @@
+- hosts: all
+  gather_facts: false
+  tasks:
+    - name: "check if /etc/alternatives/java exists"
+      stat:
+        path: /etc/alternatives/java
+      register: p
+    - debug:
+        msg: "/etc/alternatives/java exists"
+      when: p.stat.exists
+    - name: "delete old link"
+      file:
+         path: /etc/alternatives/java 
+         state: absent
+      become: yes
+      when: p.stat.exists
+    - name: "create new link"
+      file: 
+         src: /home/usuario/apps/dev/sdkman/candidates/java/current/bin/java
+         dest: /etc/alternatives/java
+         state: link
+      become: yes
+  
+    
+

@@ -1,0 +1,46 @@
+---
+
+- hosts: all
+  gather_facts: false
+  pre_tasks:
+    - name: "get default java version"
+      raw: "curl -s https://api.sdkman.io/2/candidates/java/linux/versions/list?installed= | awk -F'|' '{print $6 }'|grep open|grep {{default_major_java_version}}"
+      register: curl_out
+    - name: "set default"
+      set_fact:
+         latest_java_version: "{{curl_out.stdout| replace('\n', '')| replace('\r', '')| trim}}"  
+  roles:        
+    - basic_stuff
+    - role: sdkman
+      sdkman_dir: "/home/usuario/apps/dev/sdkman"
+      sdkman_user: usuario
+      sdkman_group: usuario
+      sdkman_auto_answer: true
+      sdkman_update: true      
+      sdkman_install_packages:
+        - { candidate: java, version: "{{latest_java_version}}" }
+        - { candidate: gradle, version: "{{default_gradle_version}}" }       
+        - { candidate: maven, version: "{{default_maven_version}}" }        
+      sdkman_defaults:
+        gradle: "{{default_gradle_version}}"
+        maven: "{{default_maven_version}}"
+        java: "{{latest_java_version}}"
+      sdkman_flush_caches_before:
+        - temp
+      sdkman_flush_caches_after:
+        - archives
+        - broadcast
+        - candidates
+        - temp
+      sdkman_offline_mode: false
+      sdkman_update_alternatives:
+        - candidate: java
+          name: java
+          link: /usr/bin/java
+        - candidate: java
+          name: javac
+          link: /usr/bin/javac
+
+    - tools
+    - virtualbox
+    - docker

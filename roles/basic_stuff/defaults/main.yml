@@ -1,0 +1,24 @@
+---
+# defaults file for basic_stuff
+
+riskms_hosts:
+- ip_addr: 192.168.11.10
+  host_name: jiraerf.riskms.es
+- ip_addr: 192.168.11.10
+  host_name: jira.riskms.es
+- ip_addr: 192.168.11.10
+  host_name: svn.riskms.es
+- ip_addr: 192.168.11.151
+  host_name: jiraaml.riskms.es
+- ip_addr: 192.168.11.151
+  host_name: svn.intranet.riskms.es
+- ip_addr: 192.168.11.230
+  host_name: devtools.intranet.riskms.es
+- ip_addr: 192.168.11.120
+  host_name: devtools120.intranet.riskms.es
+- ip_addr: 192.168.11.237
+  host_name: sqlglobal.intranet.riskms.es
+- ip_addr: 192.168.11.220
+  host_name: oracle.intranet.riskms.es
+- ip_addr: 192.168.11.211
+  host_name: moodle.riskms.es

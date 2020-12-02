@@ -1,0 +1,45 @@
+---
+# tasks file for docker
+- name: install docker.io
+  package:
+    name: docker.io
+    state: present
+  become: yes
+
+- name: Ensure group "docker" exists
+  group:
+    name: docker
+    state: present
+  become: yes
+- name: add the user to docker group
+  user:
+    name: usuario
+    groups: docker
+    append: yes
+  become: yes
+- name: Copy file with owner and permissions
+  copy:
+    src: daemon.json
+    dest: /etc/docker/daemon.json
+    owner: root
+    group: root
+    mode: '0644'
+  become: yes
+- name: "Install docker compose"
+  shell: "curl -L \"https://github.com/docker/compose/releases/download/{{docker_compose_version}}/docker-compose-$(uname -s)-$(uname -m)\" -o /usr/local/bin/docker-compose"
+  become: yes
+
+- name: "Setting permissions"
+  shell: "chmod a+x /usr/local/bin/docker-compose"
+  become: yes
+  
+- name: "Setting owner"
+  shell: "chown {{ansible_user}}:{{ansible_user}} /usr/local/bin/docker-compose"
+  become: yes
+
+- name: Restart service docker, in all cases
+  service:
+    name: docker
+    state: restarted
+  become: yes
+
