@@ -6,4 +6,4 @@ Priority: 900
 Session-Type: Additional
 Session:
         required                        pam_mkhomedir.so umask=0022 skel=/etc/skel
-EOF; \
+EOF
