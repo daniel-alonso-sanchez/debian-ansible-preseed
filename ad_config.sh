@@ -12,7 +12,6 @@ export PATH=$PATH:/usr/sbincat > /etc/init.d/ad-connect <<EOL
 # Description:       starts my-start-script using start-stop-daemon
 ### END INIT INFO
 
-exec > /root/logfile.txt 2>&1
 AD_USER=`cat /root/ad_user`
 AD_DOMAIN=`cat /root/ad_domain`
 cat /root/ad_cred| realm join -U $AD_USER $AD_DOMAIN
