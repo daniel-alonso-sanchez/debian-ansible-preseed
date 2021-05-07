@@ -1,0 +1,6 @@
+if ! [ $(id -u) = 0 ]; then
+  export home_dir=$( getent passwd "$USER" |cut -d: -f6)
+  export current_ip="$(hostname -I |awk '{ print $1}')"
+  echo $current_ip > $home_dir/current_ip
+  echo $USER > $home_dir/current_user
+fi
