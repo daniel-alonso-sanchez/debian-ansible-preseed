@@ -1,12 +1,12 @@
 #!/bin/bash
 ### BEGIN INIT INFO
-# Provides:       my-start-script
+# Provides:       ad-connect
 # Required-Start:    \$local_fs \$syslog
 # Required-Stop:     \$local_fs \$syslog
-# Default-Start:     2 3 4 5
-# Default-Stop:      0 1 6
-# Short-Description: starts my-start-script
-# Description:       starts my-start-script using start-stop-daemon
+# Default-Start:     5
+# Default-Stop:      6
+# Short-Description: starts ad-connect
+# Description:       starts ad-connect using start-stop-daemon
 ### END INIT INFO
 touch /root/flag.file
 AD_USER=`cat /root/ad_user`
