@@ -1,7 +1,7 @@
 #!/bin/bash
-exec > '/home/usuario/.customization.log'
+exec > '/home/ansible/.customization.log'
 cd "$(dirname "$0")"
-if [ -e /home/usuario/.initialized ]
+if [ -e /home/ansible/.initialized ]
 then
     echo 'No steps required'
 else
