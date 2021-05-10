@@ -11,10 +11,10 @@
          latest_java_version: "{{curl_out.stdout| replace('\n', '')| replace('\r', '')| trim}}"  
   roles:        
     - basic_stuff
-    - role: sdkman
-      sdkman_dir: "/home/usuario/apps/dev/sdkman"
-      sdkman_user: usuario
-      sdkman_group: usuario
+    - role: sdkman      
+      sdkman_dir: "/home/{{for_user}}/apps/dev/sdkman"
+      sdkman_user: "{{for_user}}"
+      sdkman_group: "{{for_user}}"
       sdkman_auto_answer: true
       sdkman_update: true      
       sdkman_install_packages:

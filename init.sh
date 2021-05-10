@@ -15,5 +15,5 @@ docker run \
 
 touch /home/ansible/.initialized
 # dejamos el fichero como estaba
-mv /home/ansible/ansible/local_inventory_bck /home/usuario/ansible/local_inventory
+mv /home/ansible/ansible/local_inventory_bck /home/ansible/ansible/local_inventory
 

@@ -2,32 +2,32 @@
 tools:
 - name: eclipse
   url: "https://mirror.ibcp.fr/pub/eclipse/technology/epp/downloads/release/2020-09/R/eclipse-jee-2020-09-R-linux-gtk-x86_64.tar.gz"
-  installation_path: "/home/usuario/apps/dev/ide"
+  installation_path: "/home/{{for_user}}/apps/dev/ide"
 
 - name: visual_studio_code
-  url: "https://az764295.vo.msecnd.net/stable/e5a624b788d92b8d34d1392e4c4d9789406efe8f/code-stable-x64-1605051992.tar.gz"
-  installation_path: "/home/usuario/apps/dev/ide"
+  url: "https://az764295.vo.msecnd.net/stable/cfa2e218100323074ac1948c885448fdf4de2a7f/code-stable-x64-1620166750.tar.gz"
+  installation_path: "/home/{{for_user}}/apps/dev/ide"
 
 - name: intellij
-  url: "https://download-cf.jetbrains.com/idea/ideaIC-2020.3.tar.gz"
-  installation_path: "/home/usuario/apps/dev/intellij"
+  url: "https://download.jetbrains.com/idea/ideaIC-2021.1.1.tar.gz"
+  installation_path: "/home/{{for_user}}/apps/dev/intellij"
 
 - name: dbeaver
   url: "https://dbeaver.io/files/dbeaver-ce-latest-linux.gtk.x86_64.tar.gz"
-  installation_path: "/home/usuario/apps/dev/bbdd"
+  installation_path: "/home/{{for_user}}/apps/dev/bbdd"
 
 
 - name: postman
   url: "https://dl.pstmn.io/download/latest/linux64"
-  installation_path: "/home/usuario/apps/testing"
+  installation_path: "/home/{{for_user}}/apps/testing"
 
 - name: soapui
   url: "http://dl.eviware.com/soapuios/5.6.0/SoapUI-5.6.0-linux-bin.tar.gz"
-  installation_path: "/home/usuario/apps/testing"
+  installation_path: "/home/{{for_user}}/apps/testing"
 
 debs:
 
 - https://packages.microsoft.com/repos/ms-teams/pool/main/t/teams/teams_1.3.00.30857_amd64.deb
 - https://hadler.me/files/forticlient-sslvpn_4.4.2333-1_amd64.deb
 - http://ftp.br.debian.org/debian/pool/non-free/f/firmware-nonfree/firmware-iwlwifi_20190114-2_all.deb
-- https://dl.discordapp.net/apps/linux/0.0.13/discord-0.0.13.deb
+- https://dl.discordapp.net/apps/linux/0.0.14/discord-0.0.14.deb

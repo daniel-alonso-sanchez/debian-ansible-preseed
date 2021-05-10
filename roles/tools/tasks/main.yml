@@ -5,8 +5,3 @@
   include: fetch_and_extract.yml tool={{item}}  
   with_items: "{{ tools }}"
 
-- name: "installing slack"
-  apt:
-    deb: "{{item}}"
-  become: yes
-  with_items: "{{debs}}"
