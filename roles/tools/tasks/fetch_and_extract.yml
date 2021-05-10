@@ -13,4 +13,4 @@
     dest: "{{tool.installation_path}}"
     remote_src: yes
     owner: "{{for_user}}"
-    group: "{{for_user}}"
+    group: "{{for_group}}"

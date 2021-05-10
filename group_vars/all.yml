@@ -2,3 +2,4 @@ default_major_java_version: 8.0
 default_maven_version: 3.6.1
 default_gradle_version: 6.0
 for_user: usuario
+for_group: "usuarios del dominio"
