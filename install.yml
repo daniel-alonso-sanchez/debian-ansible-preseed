@@ -14,7 +14,7 @@
     - role: sdkman      
       sdkman_dir: "/home/{{for_user}}/apps/dev/sdkman"
       sdkman_user: "{{for_user}}"
-      sdkman_group: "{{for_user}}"
+      sdkman_group: "{{for_group}}"
       sdkman_auto_answer: true
       sdkman_update: true      
       sdkman_install_packages:

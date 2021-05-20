@@ -4,16 +4,17 @@ cp /home/ansible/ansible/local_inventory /home/ansible/ansible/local_inventory_b
 git checkout -- .
 git checkout -b ad origin/ad
 sed -i "s/127\.0\.0\.1/$current_ip/" /home/ansible/ansible/local_inventory
+sed "s/$/ ansible_ssh_common_args='-o StrictHostKeyChecking=no'/" /home/ansible/ansible/local_inventory > /home/ansible/ansible/local_inventory
 
-docker run \
+sudo docker run \
     -v ${PWD}:/ansible \
-    jones2748/alpine-ansible-mitogen:latest \
-    ansible-playbook -i local_inventory install.yml
+    willhallonline/ansible:2.10 \
+    ansible-playbook -i local_inventory install.yml --extra-vars "for_user=$USER"
 
-docker run \
+sudo docker run \
     -v ${PWD}:/ansible \
-    jones2748/alpine-ansible-mitogen:latest \
-    ansible-playbook -i local_inventory post_java_install.yml
+    willhallonline/ansible:2.10 \
+    ansible-playbook -i local_inventory post_java_install.yml --extra-vars "for_user=$USER"
 
 touch /home/ansible/.initialized
 # dejamos el fichero como estaba
