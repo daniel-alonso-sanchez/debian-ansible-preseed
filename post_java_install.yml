@@ -16,7 +16,7 @@
       when: p.stat.exists
     - name: "create new link"
       file: 
-         src: "/home/{{for_user}/apps/dev/sdkman/candidates/java/current/bin/java"
+         src: "/home/{{for_user}}/apps/dev/sdkman/candidates/java/current/bin/java"
          dest: /etc/alternatives/java
          state: link
       become: yes
