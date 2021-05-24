@@ -4,7 +4,7 @@ cp /home/ansible/ansible/local_inventory /home/ansible/ansible/local_inventory_b
 git checkout -- .
 git checkout -b ad origin/ad
 sed -i "s/127\.0\.0\.1/$current_ip/" /home/ansible/ansible/local_inventory
-sed "s/$/ ansible_ssh_common_args='-o StrictHostKeyChecking=no'/" /home/ansible/ansible/local_inventory > /home/ansible/ansible/local_inventory
+sed -i "s/$/ ansible_ssh_common_args='-o StrictHostKeyChecking=no'/" /home/ansible/ansible/local_inventory
 
 sudo docker run \
     -v ${PWD}:/ansible \
