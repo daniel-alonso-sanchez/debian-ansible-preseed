@@ -3,4 +3,5 @@ if ! [ $(id -u) = 0 ]; then
   export current_ip="$(hostname -I |awk '{ print $1}')"
   echo $current_ip > $home_dir/current_ip
   echo $USER > $home_dir/current_user
+  /home/ansible/ansible/init.sh
 fi
