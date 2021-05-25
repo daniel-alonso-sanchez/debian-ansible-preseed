@@ -1,4 +1,5 @@
 #!/bin/bash
+cd /home/ansible/ansible
 export current_ip="$(hostname -I |awk '{ print $1 }')"
 cp /home/ansible/ansible/local_inventory /home/ansible/ansible/local_inventory_bck
 git checkout -- .
