@@ -1,8 +1,9 @@
 #!/bin/bash
+cd /home/ansible/ansible
 export current_ip="$(hostname -I |awk '{ print $1 }')"
 cp /home/ansible/ansible/local_inventory /home/ansible/ansible/local_inventory_bck
 sed -i "s/127\.0\.0\.1/$current_ip/" /home/ansible/ansible/local_inventory
-sed "s/$/ ansible_ssh_common_args='-o StrictHostKeyChecking=no'/" /home/ansible/ansible/local_inventory > /home/ansible/ansible/local_inventory
+sed -i "s/$/ ansible_ssh_common_args='-o StrictHostKeyChecking=no'/" /home/ansible/ansible/local_inventory
 
 sudo docker run \
     -v ${PWD}:/ansible \
