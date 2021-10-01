@@ -23,10 +23,10 @@ if [ ! -f "$FLAG_FILE" ]; then
   sed -i 's|use_fully_qualified_names = True|use_fully_qualified_names = False|g' /etc/sssd/sssd.conf
   sed -i 's|/home/%u@%d|/home/%u|g' /etc/sssd/sssd.conf
   cat <<EOT >> /etc/sssd/sssd.conf
-account_cache_expiration = 15
+account_cache_expiration = 0
 
 [pam]
-offline_credentials_expiration = 15
+offline_credentials_expiration = 0
 reconnection_retries = 3
 EOT
 fi
