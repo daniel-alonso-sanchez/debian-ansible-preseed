@@ -28,5 +28,5 @@ tools:
 debs:
 
 - https://packages.microsoft.com/repos/ms-teams/pool/main/t/teams/teams_1.3.00.30857_amd64.deb
-- https://hadler.me/files/forticlient-sslvpn_4.4.2333-1_amd64.deb
+- https://hadler.me/files/forticlient-sslvpn_4.4.2332-1_amd64.deb
 - https://dl.discordapp.net/apps/linux/0.0.13/discord-0.0.13.deb
