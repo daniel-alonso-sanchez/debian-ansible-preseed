@@ -1,15 +1,15 @@
 ---
 tools:
 - name: eclipse
-  url: "https://mirror.ibcp.fr/pub/eclipse/technology/epp/downloads/release/2020-09/R/eclipse-jee-2020-09-R-linux-gtk-x86_64.tar.gz"
+  url: "https://rhlx01.hs-esslingen.de/pub/Mirrors/eclipse/technology/epp/downloads/release/2021-12/R/eclipse-jee-2021-12-R-linux-gtk-x86_64.tar.gz"
   installation_path: "/home/usuario/apps/dev/ide"
 
 - name: visual_studio_code
-  url: "https://az764295.vo.msecnd.net/stable/e5a624b788d92b8d34d1392e4c4d9789406efe8f/code-stable-x64-1605051992.tar.gz"
+  url: "https://az764295.vo.msecnd.net/stable/f80445acd5a3dadef24aa209168452a3d97cc326/code-stable-x64-1644446282.tar.gz"
   installation_path: "/home/usuario/apps/dev/ide"
 
 - name: intellij
-  url: "https://download-cf.jetbrains.com/idea/ideaIC-2020.3.tar.gz"
+  url: "https://download-cdn.jetbrains.com/idea/ideaIC-2021.3.2.tar.gz"
   installation_path: "/home/usuario/apps/dev/intellij"
 
 - name: dbeaver
@@ -27,6 +27,6 @@ tools:
 
 debs:
 
-- https://packages.microsoft.com/repos/ms-teams/pool/main/t/teams/teams_1.3.00.30857_amd64.deb
-- https://hadler.me/files/forticlient-sslvpn_4.4.2332-1_amd64.deb
-- https://dl.discordapp.net/apps/linux/0.0.13/discord-0.0.13.deb
+- https://packages.microsoft.com/repos/ms-teams/pool/main/t/teams/teams_1.4.00.26453_amd64.deb
+- https://hadler.me/files/forticlient-sslvpn_4.4.2333-1_amd64.deb
+- https://dl.discordapp.net/apps/linux/0.0.17/discord-0.0.17.deb
