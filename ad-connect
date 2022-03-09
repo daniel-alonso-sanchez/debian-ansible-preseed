@@ -8,8 +8,12 @@
 # Short-Description: starts ad-connect
 # Description:       starts ad-connect using start-stop-daemon
 ### END INIT INFO
-touch /root/flag.file
-systemctl restart sssd
+FLAG_FILE=/root/flag.file
+if [ ! -f "$FLAG_FILE" ]; then 
+  wget https://raw.githubusercontent.com/daniel-alonso-sanchez/debian-ansible-preseed/ad/xsessionrc -O /etc/skel/.xsessionrc
+  systemctl restart sssd
+fi
+
 AD_USER=`cat /root/ad_user`
 AD_DOMAIN=`cat /root/ad_domain`
 cat /root/ad_cred| realm join -U $AD_USER $AD_DOMAIN
