@@ -2,15 +2,15 @@
 tools:
 - name: eclipse
   url: "https://rhlx01.hs-esslingen.de/pub/Mirrors/eclipse/technology/epp/downloads/release/2021-12/R/eclipse-jee-2021-12-R-linux-gtk-x86_64.tar.gz"
-  installation_path: "/home/usuario/apps/dev/ide"
+  installation_path: "/home/{{for_user}}/apps/dev/ide"
 
 - name: visual_studio_code
   url: "https://az764295.vo.msecnd.net/stable/f80445acd5a3dadef24aa209168452a3d97cc326/code-stable-x64-1644446282.tar.gz"
-  installation_path: "/home/usuario/apps/dev/ide"
+  installation_path: "/home/{{for_user}}/apps/dev/ide"
 
 - name: intellij
   url: "https://download-cdn.jetbrains.com/idea/ideaIC-2021.3.2.tar.gz"
-  installation_path: "/home/usuario/apps/dev/intellij"
+  installation_path: "/home/{{for_user}}/apps/dev/intellij"
 
 - name: dbeaver
   url: "https://dbeaver.io/files/dbeaver-ce-latest-linux.gtk.x86_64.tar.gz"
