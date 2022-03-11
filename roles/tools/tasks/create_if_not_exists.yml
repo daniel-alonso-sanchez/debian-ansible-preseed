@@ -12,4 +12,7 @@
      path: "{{install_dir}}"
      state: directory
      mode: 0755
+     owner: "{{for_user}}"
+     group: "{{for_group}}"
+
     when: my_folder.stat.exists == false

@@ -1,4 +1,6 @@
 ---
+dependencies:
+ - libappindicator1
 tools:
 - name: eclipse
   url: "https://rhlx01.hs-esslingen.de/pub/Mirrors/eclipse/technology/epp/downloads/release/2021-12/R/eclipse-jee-2021-12-R-linux-gtk-x86_64.tar.gz"

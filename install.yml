@@ -10,37 +10,37 @@
       set_fact:
          latest_java_version: "{{curl_out.stdout| replace('\n', '')| replace('\r', '')| trim}}"  
   roles:        
-    - basic_stuff
-    - role: sdkman      
-      sdkman_dir: "/home/{{for_user}}/apps/dev/sdkman"
-      sdkman_user: "{{for_user}}"
-      sdkman_group: "{{for_group}}"
-      sdkman_auto_answer: true
-      sdkman_update: true      
-      sdkman_install_packages:
-        - { candidate: java, version: "{{latest_java_version}}" }
-        - { candidate: gradle, version: "{{default_gradle_version}}" }       
-        - { candidate: maven, version: "{{default_maven_version}}" }        
-      sdkman_defaults:
-        gradle: "{{default_gradle_version}}"
-        maven: "{{default_maven_version}}"
-        java: "{{latest_java_version}}"
-      sdkman_flush_caches_before:
-        - temp
-      sdkman_flush_caches_after:
-        - archives
-        - broadcast
-        - candidates
-        - temp
-      sdkman_offline_mode: false
-      sdkman_update_alternatives:
-        - candidate: java
-          name: java
-          link: /usr/bin/java
-        - candidate: java
-          name: javac
-          link: /usr/bin/javac
+#    - basic_stuff
+#    - role: sdkman      
+#      sdkman_dir: "/home/{{for_user}}/apps/dev/sdkman"
+#      sdkman_user: "{{for_user}}"
+#      sdkman_group: "{{for_group}}"
+#      sdkman_auto_answer: true
+#      sdkman_update: true      
+#      sdkman_install_packages:
+#        - { candidate: java, version: "{{latest_java_version}}" }
+#        - { candidate: gradle, version: "{{default_gradle_version}}" }       
+#        - { candidate: maven, version: "{{default_maven_version}}" }        
+#      sdkman_defaults:
+#        gradle: "{{default_gradle_version}}"
+#        maven: "{{default_maven_version}}"
+#        java: "{{latest_java_version}}"
+#      sdkman_flush_caches_before:
+#        - temp
+#      sdkman_flush_caches_after:
+#        - archives
+#        - broadcast
+#        - candidates
+#        - temp
+#      sdkman_offline_mode: false
+#      sdkman_update_alternatives:
+#        - candidate: java
+#          name: java
+#          link: /usr/bin/java
+#        - candidate: java
+#          name: javac
+#          link: /usr/bin/javac
 
     - tools
-    - virtualbox
-    - docker
+#    - virtualbox
+#    - docker
