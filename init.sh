@@ -8,12 +8,12 @@ sed -i "s/$/ ansible_ssh_common_args='-o StrictHostKeyChecking=no'/" /home/ansib
 
 sudo docker run \
     -v ${PWD}:/ansible \
-    willhallonline/ansible:2.10 \
+    willhallonline/ansible:2.10-buster \
     ansible-playbook -i local_inventory install.yml --extra-vars "for_user=$USER"
 
 sudo docker run \
     -v ${PWD}:/ansible \
-    willhallonline/ansible:2.10 \
+    willhallonline/ansible:2.10-buster \
     ansible-playbook -i local_inventory post_java_install.yml --extra-vars "for_user=$USER"
 
 touch /home/ansible/.initialized
