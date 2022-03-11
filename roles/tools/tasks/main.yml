@@ -1,13 +1,13 @@
 ---
 # tasks file for tools
 
-- name: "installing dependencies"
-  apt:
-    name: "{{item}}"
-    state: present
-    update_cache: yes
-  with_items: "{{dependencies}}"
-  become: yes
+#- name: "installing dependencies"
+#  apt:
+#    name: "{{item}}"
+#    state: present
+#    update_cache: yes
+#  with_items: "{{dependencies}}"
+#  become: yes
 
 - name: "fetching and installing"
   include: fetch_and_extract.yml tool={{item}}  
