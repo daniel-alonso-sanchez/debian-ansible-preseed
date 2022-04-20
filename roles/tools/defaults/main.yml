@@ -3,15 +3,15 @@ dependencies:
  - libappindicator1
 tools:
 - name: eclipse
-  url: "https://rhlx01.hs-esslingen.de/pub/Mirrors/eclipse/technology/epp/downloads/release/2021-12/R/eclipse-jee-2021-12-R-linux-gtk-x86_64.tar.gz"
+  url: "https://mirror.ibcp.fr/pub/eclipse/technology/epp/downloads/release/2022-03/R/eclipse-java-2022-03-R-linux-gtk-x86_64.tar.gz"
   installation_path: "/home/{{for_user}}/apps/dev/ide"
 
 - name: visual_studio_code
-  url: "https://az764295.vo.msecnd.net/stable/f80445acd5a3dadef24aa209168452a3d97cc326/code-stable-x64-1644446282.tar.gz"
+  url: "https://az764295.vo.msecnd.net/stable/dfd34e8260c270da74b5c2d86d61aee4b6d56977/code-stable-x64-1649664837.tar.gz"
   installation_path: "/home/{{for_user}}/apps/dev/ide"
 
 - name: intellij
-  url: "https://download-cdn.jetbrains.com/idea/ideaIC-2021.3.2.tar.gz"
+  url: "https://download-cdn.jetbrains.com/idea/ideaIC-2022.1.tar.gz"
   installation_path: "/home/{{for_user}}/apps/dev/intellij"
 
 - name: dbeaver
@@ -29,7 +29,7 @@ tools:
 
 debs:
 
-- https://packages.microsoft.com/repos/ms-teams/pool/main/t/teams/teams_1.4.00.26453_amd64.deb
+- https://packages.microsoft.com/repos/ms-teams/pool/main/t/teams/teams_1.5.00.10453_amd64.deb
 - https://hadler.me/files/forticlient-sslvpn_4.4.2333-1_amd64.deb
-- http://ftp.br.debian.org/debian/pool/non-free/f/firmware-nonfree/firmware-iwlwifi_20190114-2_all.deb
+- http://ftp.es.debian.org/debian/pool/non-free/f/firmware-nonfree/firmware-iwlwifi_20210315-3_all.deb
 - https://dl.discordapp.net/apps/linux/0.0.17/discord-0.0.17.deb
