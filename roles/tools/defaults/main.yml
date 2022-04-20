@@ -26,10 +26,13 @@ tools:
 - name: soapui
   url: "http://dl.eviware.com/soapuios/5.6.0/SoapUI-5.6.0-linux-bin.tar.gz"
   installation_path: "/home/{{for_user}}/apps/testing"
+  
+- name: discord
+  url: "https://dl.discordapp.net/apps/linux/0.0.17/discord-0.0.17.tar.gz"
+  installation_path: "/home/{{for_user}}/apps/net"
 
 debs:
 
 - https://packages.microsoft.com/repos/ms-teams/pool/main/t/teams/teams_1.5.00.10453_amd64.deb
 - https://hadler.me/files/forticlient-sslvpn_4.4.2333-1_amd64.deb
 - http://ftp.es.debian.org/debian/pool/non-free/f/firmware-nonfree/firmware-iwlwifi_20210315-3_all.deb
-- https://dl.discordapp.net/apps/linux/0.0.17/discord-0.0.17.deb
