@@ -7,14 +7,16 @@ sed -i "s/127\.0\.0\.1/$current_ip/" /home/ansible/ansible/local_inventory
 sed -i "s/$/ ansible_ssh_common_args='-o StrictHostKeyChecking=no'/" /home/ansible/ansible/local_inventory
 
 sudo docker run \
+    -e ANSIBLE_LOG_PATH=/ansible/ansible.log \
     -v ${PWD}:/ansible \
     willhallonline/ansible:2.10-buster \
-    ansible-playbook -i local_inventory install.yml --extra-vars "for_user=$USER"
+    ansible-playbook -i local_inventory install.yml --extra-vars "for_user=$USER for_group=$(id -gn)"
 
 sudo docker run \
+    -e ANSIBLE_LOG_PATH=/ansible/ansible.log \
     -v ${PWD}:/ansible \
     willhallonline/ansible:2.10-buster \
-    ansible-playbook -i local_inventory post_java_install.yml --extra-vars "for_user=$USER"
+    ansible-playbook -i local_inventory post_java_install.yml --extra-vars "for_user=$USER for_group=$(id -gn)"
 
 touch /home/ansible/.initialized
 # dejamos el fichero como estaba

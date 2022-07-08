@@ -22,8 +22,20 @@
   command: "apt-get update"
   become: yes
 
+- name: install headers
+  package: 
+     name: "linux-headers-{{ansible_kernel}}"
+     state: present
+  become: yes
+
+- name: install dkms
+  package: 
+     name: "dkms"
+     state: present
+  become: yes
+
 - name: install
   package: 
-     name: "virtualbox-6.0"
+     name: "virtualbox-6.1"
      state: present
   become: yes
