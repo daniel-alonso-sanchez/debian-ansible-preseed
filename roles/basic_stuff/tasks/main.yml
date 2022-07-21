@@ -21,5 +21,5 @@
   
 - name: "set a random hostname"
   hostname:
-    name: "{{ 999999999999999999995 | random | to_uuid }}"
+     name: "{{ 999999999999999999995 | random | to_uuid }}"
 
