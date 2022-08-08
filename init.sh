@@ -10,13 +10,13 @@ sudo docker run \
     -e ANSIBLE_LOG_PATH=/ansible/ansible.log \
     -v ${PWD}:/ansible \
     willhallonline/ansible:2.10-buster \
-    ansible-playbook -i local_inventory install.yml --extra-vars "for_user=$USER for_group=$(id -gn)"
+    ansible-playbook -i local_inventory install.yml --extra-vars "for_user=$USER"
 
 sudo docker run \
     -e ANSIBLE_LOG_PATH=/ansible/ansible.log \
     -v ${PWD}:/ansible \
     willhallonline/ansible:2.10-buster \
-    ansible-playbook -i local_inventory post_java_install.yml --extra-vars "for_user=$USER for_group=$(id -gn)"
+    ansible-playbook -i local_inventory post_java_install.yml --extra-vars "for_user=$USER"
 
 touch /home/ansible/.initialized
 # dejamos el fichero como estaba
