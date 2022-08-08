@@ -12,17 +12,14 @@
   set_fact:
     is_modern_probook: "{{ansible_facts['product_name'] == 'HP ProBook 440 G8 Notebook PC'}}"
 
-- name: "Configure alsa service for soundcard if modern laptop"
-  copy:
-     dest: /etc/modprobe.d/alsa-base.conf
-     content: |
-        options snd-hda-intel dmic_detect=0
+- name: "Install firmware sof signed"
+  package:
+     name: firmware-sof-signed
+     state: present
+  become: yes   
   when: is_modern_probook
-
-- name: "Configure blacklist for soundcard if modern laptop"
-  copy:
-     dest: /etc/modprobe.d/blacklist.conf
-     content: |
-        blacklist snd_soc_skl
-  when: is_modern_probook
+  
+- name: "set a random hostname"
+  hostname:
+     name: "{{ 999999999999999999995 | random | to_uuid }}"
 
